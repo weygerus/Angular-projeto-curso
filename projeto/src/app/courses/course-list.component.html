@@ -1,0 +1,24 @@
+<h2>welcome</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>imagem</th>
+            <th>name</th>
+            <th>price</th>
+            <th>code</th>
+            <th>rating</th>
+            <th>opções</th>  
+        </tr>  
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of courses">
+            <td>{{item.imageUrl}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.price}}</td>
+            <td>{{item.code}}</td>
+            <td>{{item.rating}}</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
