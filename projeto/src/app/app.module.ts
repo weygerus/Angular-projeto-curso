@@ -4,11 +4,13 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { courseListComponent } from './courses/course-list.component';
+import { StarComponent } from './star/star.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    courseListComponent
+    courseListComponent,
+    StarComponent
   ],
   imports: [
     BrowserModule,

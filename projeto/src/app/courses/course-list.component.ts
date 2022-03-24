@@ -17,7 +17,8 @@ export class courseListComponent implements OnInit {
             {
                 id       : 1,
                 name     : 'Introdução ao Angular 12',
-                imageUrl : '',
+                imageUrl : '/assets/img/angular-logo.png',
+                imgWidth : 50,
                 price    : 100,
                 code     : 'exemplo-1',
                 duration : 20,
@@ -26,7 +27,8 @@ export class courseListComponent implements OnInit {
             {
                 id       : 2,
                 name     : 'Introdução ao HTML 5',
-                imageUrl : '',
+                imageUrl : '/assets/img/html-logo.png',
+                imgWidth : 50,
                 price    : 100,
                 code     : 'exemplo-2',
                 duration : 20,
