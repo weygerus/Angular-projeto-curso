@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { ICourses } from './course';
+import { ICourses, ItableHeader } from './course';
 
 @Component({
     selector:'app-course-list',
@@ -9,10 +9,20 @@ import { ICourses } from './course';
 
 export class courseListComponent implements OnInit {
     
-    courses : ICourses[] = [];
+    courses  : ICourses[] = [];
+    header!  : ItableHeader[];
 
     ngOnInit(): void {
-
+        this.header = [
+            {
+                imagem :'',
+                nome   :'Curso',
+                preco  :'Preço',
+                code   :'Codigo',
+                rating :'Avaliação',
+                opcoes :'Opções'
+            }
+        ]
         this.courses = [
             {
                 id       : 1,
@@ -32,7 +42,7 @@ export class courseListComponent implements OnInit {
                 price    : 100,
                 code     : 'exemplo-2',
                 duration : 20,
-                rating   : 4.5, 
+                rating   : 4.4, 
             },
         ]    
     }

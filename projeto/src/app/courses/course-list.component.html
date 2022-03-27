@@ -1,14 +1,19 @@
-<h2>welcome</h2>
+<h2>Lista de cursos</h2>
+<style>
+    h2{
+        margin: 50px 0 30px 0;
+    }
+</style>
 
 <table class="table table-striped align-middle">
-    <thead>
+    <thead *ngFor="let item of header">
         <tr>
-            <th>imagem</th>
-            <th>name</th>
-            <th>price</th>
-            <th>code</th>
-            <th>rating</th>
-            <th>opções</th>  
+            <th>{{item.imagem}}</th>
+            <th>{{item.nome}}</th>
+            <th>{{item.preco}}</th>
+            <th>{{item.code}}</th>
+            <th>{{item.rating}}</th>
+            <th>{{item.opcoes}}</th>  
         </tr>  
     </thead>
     <tbody>
@@ -17,7 +22,10 @@
             <td>{{item.name}}</td>
             <td>{{item.price}}</td>
             <td>{{item.code}}</td>
-            <td>{{item.rating}}</td>
+            <td>
+                {{item.rating}}
+                <app-star [rating]="item.rating"></app-star>
+            </td>
             <td></td>
         </tr>
     </tbody>

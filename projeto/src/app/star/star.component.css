@@ -1,0 +1,9 @@
+.stars{
+    width: 100px;
+}
+.crop{
+    overflow: hidden;
+}
+.fa-star{
+    color: darkgray;
+}
