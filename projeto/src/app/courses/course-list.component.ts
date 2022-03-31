@@ -13,6 +13,7 @@ export class courseListComponent implements OnInit {
     header!  : ItableHeader[];
 
     ngOnInit(): void {
+        // Table cabeçalho //
         this.header = [
             {
                 imagem :'',
@@ -23,6 +24,7 @@ export class courseListComponent implements OnInit {
                 opcoes :'Opções'
             }
         ]
+        // Table cursos //
         this.courses = [
             {
                 id       : 1,
