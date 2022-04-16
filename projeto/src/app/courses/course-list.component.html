@@ -1,9 +1,12 @@
 <h2>Lista de cursos</h2>
-<style>
-    h2{
-        margin: 50px 0 30px 0;
-    }
-</style>
+
+<div class="form-group row">
+    <label for="col-sm-2 col-from-label">Pesquisa:</label>
+
+    <div class="col-sm-6">
+        <input [(ngModel)]="filtro" class="form-control">
+    </div>
+</div>
 
 <table class="table table-striped align-middle">
     <thead *ngFor="let item of header">
@@ -17,15 +20,12 @@
         </tr>  
     </thead>
     <tbody>
-        <tr *ngFor="let item of courses">
+        <tr *ngFor="let item of cursosFiltrados">
             <td><img src="{{item.imageUrl}}" alt="brands" width="{{item.imgWidth}}"></td>
             <td>{{item.name}}</td>
             <td>{{item.price}}</td>
             <td>{{item.code}}</td>
-            <td>
-                {{item.rating}}
-                <app-star [rating]="item.rating"></app-star>
-            </td>
+            <td>{{item.rating}}<app-star [rating]="item.rating"></app-star></td>
             <td></td>
         </tr>
     </tbody>

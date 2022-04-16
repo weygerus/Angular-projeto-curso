@@ -7,12 +7,14 @@ export interface ItableHeader {
     opcoes : string; 
 }
 export interface ICourses {
-    id       : number;
-    name     : string;
-    imageUrl : string;
-    imgWidth : number;
-    price    : number;
-    code     : string;
-    duration : number;
-    rating   : number;
+    id          : number;
+    name        : string;
+    releaseDate : string;
+    description : string;
+    imageUrl    : string;
+    imgWidth    : number;
+    price       : number;
+    code        : string;
+    duration    : number;
+    rating      : number;
 }

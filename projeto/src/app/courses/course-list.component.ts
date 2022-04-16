@@ -1,16 +1,25 @@
+import { CourseService } from './course.service';
 import { Component, OnInit } from '@angular/core';
 
 import { ICourses, ItableHeader } from './course';
 
 @Component({
     selector:'app-course-list',
-    templateUrl:'./course-list.component.html'
+    templateUrl:'./course-list.component.html',
+    styleUrls: ['./course-list.component.css']
 })
 
 export class courseListComponent implements OnInit {
     
-    courses  : ICourses[] = [];
-    header!  : ItableHeader[];
+    _courses  : ICourses[] = [];
+    header!   : ItableHeader[];
+
+    _pesquisa!        : string;
+    cursosFiltrados!  : ICourses[]
+
+    constructor(private CourseService: CourseService){
+        this._courses = this.CourseService.retrieveAll();
+    }
 
     ngOnInit(): void {
         // Table cabeçalho //
@@ -24,28 +33,16 @@ export class courseListComponent implements OnInit {
                 opcoes :'Opções'
             }
         ]
-        // Table cursos //
-        this.courses = [
-            {
-                id       : 1,
-                name     : 'Introdução ao Angular 12',
-                imageUrl : '/assets/img/angular-logo.png',
-                imgWidth : 50,
-                price    : 100,
-                code     : 'exemplo-1',
-                duration : 20,
-                rating   : 4.8, 
-            },
-            {
-                id       : 2,
-                name     : 'Introdução ao HTML 5',
-                imageUrl : '/assets/img/html-logo.png',
-                imgWidth : 50,
-                price    : 100,
-                code     : 'exemplo-2',
-                duration : 20,
-                rating   : 4.4, 
-            },
-        ]    
+        this.cursosFiltrados = this._courses
+    }
+
+    // Eventos de filtro de pesquisa // 
+    set filtro(valor: string){
+        this._pesquisa = valor;
+
+        this.cursosFiltrados = this._courses.filter((course: ICourses) => course.name.toLocaleLowerCase().indexOf(this._pesquisa.toLocaleLowerCase()) > -1)
+    }
+    get filtro(){
+        return this._pesquisa
     }
 }
