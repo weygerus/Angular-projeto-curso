@@ -62,6 +62,18 @@ var COURSES: ICourses[] = [
     },
     {
         id: 5,
+        name: 'Angular: Router 2',
+        releaseDate: 'November 16, 2019',
+        description: 'Neste curso, os alunos irão obter um conhecimento aprofundado sobre os recursos disponíveis no módulo de Router.',
+        duration: 80,
+        code: 'OHP-1095',
+        rating: 4.3,
+        price: 46.99,
+        imageUrl: '/assets/img/router.png',
+        imgWidth: 50
+    },
+    {
+        id: 6,
         name: 'Angular: Animations',
         releaseDate: 'November 25, 2019',
         description: 'Neste curso, os alunos irão obter um conhecimento aprofundado sobre os recursos disponíveis sobre Animation.',

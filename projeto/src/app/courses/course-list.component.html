@@ -1,10 +1,10 @@
 <h2>Lista de cursos</h2>
 
 <div class="form-group row">
-    <label for="col-sm-2 col-from-label">Pesquisa:</label>
+    <label for="col-sm-2 col-from-label">Pesquisar cursos:</label>
 
     <div class="col-sm-6">
-        <input [(ngModel)]="filtro" class="form-control">
+        <input [(ngModel)]="filtro" class="form-control pesquisa">
     </div>
 </div>
 
@@ -15,6 +15,7 @@
             <th>{{item.nome}}</th>
             <th>{{item.preco}}</th>
             <th>{{item.code}}</th>
+            <th>{{item.releaseDate}}</th>
             <th>{{item.rating}}</th>
             <th>{{item.opcoes}}</th>  
         </tr>  
@@ -24,7 +25,8 @@
             <td><img src="{{item.imageUrl}}" alt="brands" width="{{item.imgWidth}}"></td>
             <td>{{item.name}}</td>
             <td>{{item.price}}</td>
-            <td>{{item.code}}</td>
+            <td>{{item.code | lowercase | replace: '-':' '}}</td>  <!-- PIPES: fazem alterações na exibição de propriedades -->
+            <td>{{item.releaseDate | date: 'dd/MM/yyyy'}}</td>  
             <td>{{item.rating}}<app-star [rating]="item.rating"></app-star></td>
             <td></td>
         </tr>

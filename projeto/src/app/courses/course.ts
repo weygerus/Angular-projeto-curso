@@ -1,10 +1,12 @@
 export interface ItableHeader {
-    imagem : string;
-    nome   : string; 
-    preco  : string; 
-    code   : string; 
-    rating : string; 
-    opcoes : string; 
+    imagem      : string;
+    nome        : string;
+    releaseDate : string;
+    description : string; 
+    preco       : string; 
+    code        : string; 
+    rating      : string; 
+    opcoes      : string; 
 }
 export interface ICourses {
     id          : number;

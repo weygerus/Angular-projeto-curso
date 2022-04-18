@@ -25,12 +25,14 @@ export class courseListComponent implements OnInit {
         // Table cabeçalho //
         this.header = [
             {
-                imagem :'',
-                nome   :'Curso',
-                preco  :'Preço',
-                code   :'Codigo',
-                rating :'Avaliação',
-                opcoes :'Opções'
+                imagem      :'',
+                nome        :'Curso',
+                releaseDate :'lançamento',
+                description :'descrição',
+                preco       :'Preço',
+                code        :'Codigo',
+                rating      :'Avaliação',
+                opcoes      :'Opções'
             }
         ]
         this.cursosFiltrados = this._courses
