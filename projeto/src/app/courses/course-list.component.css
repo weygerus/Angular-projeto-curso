@@ -1,9 +1,6 @@
 h2{
     margin: 50px 0 30px 0;
 }
-.row{
-    margin-bottom: 20px;
-}
 .pesquisa:focus{
     outline: none;
     border: 1px solid lightblue;
